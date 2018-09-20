@@ -120,7 +120,7 @@ module WikiBookMaker
     end
   end
 
-  # Extracts images (typically top page right navbar images) from the box and places to the parent.
+  # Extract images (typically top page right navbar images) from the box and places to the parent.
   def self.flatten_images!(node, nokogiri_page)
     node.search(".vertical-navbox").each do |navbox|
       parent = navbox.parent
@@ -167,7 +167,7 @@ module WikiBookMaker
     node.search(*bad_nodes).remove
   end
 
-  # Removes everything after the footnote ids.
+  # Remove everything after the footnote ids.
   def self.remove_footnotes!(node)
     footnote_ids = %w(
       References
