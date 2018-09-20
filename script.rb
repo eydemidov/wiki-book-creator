@@ -85,10 +85,6 @@ module WikiBookMaker
       child.remove_attribute("style")
       child.remove_attribute("align")
     end
-
-    node.search(".thumbinner").each do |thumb|
-      thumb.remove_attribute("style")
-    end
   end
 
   # Fetch images from Wikipedia and store locally. Wiki allows resizing on the fly.
